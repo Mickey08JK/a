@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
 //Firebase imports
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 // import { 
 //   provideFirestore, 
 //   getFirestore, 
@@ -48,7 +49,9 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
     // provideDatabase(() => getDatabase()),
     // provideAuth(() => getAuth())
   ],
-  providers: [],
+  providers: [
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {  }

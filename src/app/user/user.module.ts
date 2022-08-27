@@ -8,10 +8,7 @@ import { GoogleSigninDirective } from './google-signin.directive';
 
 
 @NgModule({
-  declarations: [
-    LoginPageComponent,
-    GoogleSigninDirective
-  ],
+  declarations: [LoginPageComponent, GoogleSigninDirective],
   exports: [GoogleSigninDirective],
   imports: [
     CommonModule,
